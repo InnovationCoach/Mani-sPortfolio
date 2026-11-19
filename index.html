@@ -3,409 +3,1049 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- === PAGE TITLE - This appears in the browser tab === -->
-    <title>Mani Golzary - STEAM & PBL Innovator</title>
+    <title>Mani Golzary | STEAM & PBL Innovator • AI EdTech Developer • Marketing & SEO Strategist</title>
+    
+    <!-- Primary SEO Meta Tags -->
+    <meta name="title" content="Mani Golzary | STEAM & PBL Innovator • AI EdTech Developer • Marketing & SEO Strategist">
+    <meta name="description" content="Portfolio of Mani Golzary: Founder & Lead Innovator behind WeLearn SPARK (Personalized AI-powered learning platform), modern web developer, technical SEO specialist, and STEAM/PBL curriculum architect.">
+    <meta name="keywords" content="Mani Golzary, WeLearn SPARK, AI Learning Platform, STEAM Innovation, PBL Educator, Web Development, Technical SEO, Growth Marketing, Innovation Coach, Bangkok EdTech">
+    <meta name="author" content="Mani Golzary">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://innovationcoach.github.io/Mani-sPortfolio/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://innovationcoach.github.io/Mani-sPortfolio/">
+    <meta property="og:title" content="Mani Golzary | STEAM & PBL Innovator • AI EdTech Developer • Marketing & SEO Strategist">
+    <meta property="og:description" content="Transforming education through AI-powered personalized learning (WeLearn SPARK), modern web applications, and growth marketing.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://innovationcoach.github.io/Mani-sPortfolio/">
+    <meta property="twitter:title" content="Mani Golzary | STEAM & PBL Innovator • AI EdTech Developer • Marketing & SEO Strategist">
+    <meta property="twitter:description" content="Transforming education through AI-powered personalized learning (WeLearn SPARK), modern web applications, and growth marketing.">
+    <meta property="twitter:image" content="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80">
+
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            cyan: '#06b6d4',
+                            teal: '#14b8a6',
+                            indigo: '#6366f1',
+                            purple: '#a855f7'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Structured Data (JSON-LD) for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://innovationcoach.github.io/Mani-sPortfolio/#person",
+          "name": "Mani Golzary",
+          "jobTitle": "STEAM & PBL Innovator, AI EdTech Developer, Marketing & SEO Strategist",
+          "url": "https://innovationcoach.github.io/Mani-sPortfolio/",
+          "sameAs": [
+            "https://github.com/InnovationCoach"
+          ],
+          "knowsAbout": [
+            "Personalized AI Learning Platforms",
+            "Project-Based Learning (PBL)",
+            "STEAM Curriculum Architecture",
+            "Full-Stack Web Development",
+            "Search Engine Optimization (SEO)",
+            "Growth Marketing"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://innovationcoach.github.io/Mani-sPortfolio/#website",
+          "url": "https://innovationcoach.github.io/Mani-sPortfolio/",
+          "name": "Mani Golzary Portfolio",
+          "publisher": {
+            "@id": "https://innovationcoach.github.io/Mani-sPortfolio/#person"
+          }
+        }
+      ]
+    }
+    </script>
+
     <style>
         body {
-            font-family: 'Inter', sans-serif;
-            /* Hide the default cursor for the custom one */
-            cursor: none;
+            font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
         }
 
-        /* Custom Cursor Follower */
-        .cursor-dot {
-            width: 8px;
-            height: 8px;
-            background-color: #fff;
+        /* Ambient subtle cursor glow - does NOT hide native cursor for maximum accessibility */
+        .cursor-glow {
+            width: 380px;
+            height: 380px;
+            background: radial-gradient(circle, rgba(14, 165, 233, 0.12), rgba(99, 102, 241, 0.05), transparent 70%);
             border-radius: 50%;
             position: fixed;
             top: 0;
             left: 0;
             transform: translate(-50%, -50%);
             pointer-events: none;
-            z-index: 9999;
-            transition: width 0.3s, height 0.3s;
+            z-index: 1;
+            transition: transform 0.15s ease-out;
+            filter: blur(16px);
         }
-        .cursor-outline {
-            width: 40px;
-            height: 40px;
-            border: 2px solid rgba(14, 165, 233, 0.5); /* sky-500 */
-            border-radius: 50%;
-            position: fixed;
-            top: 0;
-            left: 0;
-            transform: translate(-50%, -50%);
-            pointer-events: none;
-            z-index: 9999;
-            transition: all 0.2s ease-out;
-        }
-        /* Hide custom cursor on mobile */
+
         @media (max-width: 768px) {
-            body {
-                cursor: auto;
-            }
-            .cursor-dot, .cursor-outline {
-                display: none;
-            }
+            .cursor-glow { display: none; }
         }
-        
-        /* Animation for scrolling sections into view */
+
+        /* Section Reveal Animations */
         .fade-in-section {
             opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            transform: translateY(24px);
+            transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
         }
         .fade-in-section.is-visible {
             opacity: 1;
             transform: translateY(0);
         }
 
-        /* Slideshow animation */
-        .fade {
-            animation-name: fade;
-            animation-duration: 1.5s;
+        /* Gradient Text Helper */
+        .gradient-heading {
+            background: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #c084fc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gradient-accent {
+            background: linear-gradient(135deg, #2dd4bf 0%, #38bdf8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
-        @keyframes fade {
-            from {opacity: .4}
-            to {opacity: 1}
+        /* Glassmorphism Card Style */
+        .glass-panel {
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.3s ease;
+        }
+        .glass-panel:hover {
+            border-color: rgba(56, 189, 248, 0.35);
+            box-shadow: 0 12px 30px -10px rgba(14, 165, 233, 0.2);
+            transform: translateY(-4px);
+        }
+
+        /* Filter Tab Transitions */
+        .project-item {
+            transition: all 0.4s ease;
+        }
+        .project-item.hidden-tab {
+            display: none !important;
+        }
+
+        /* Hero Slideshow animation */
+        .slide {
+            display: none;
+            animation: fadeIn 0.8s ease-in-out;
+        }
+        .slide.active-slide {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0.4; }
+            to { opacity: 1; }
         }
     </style>
 </head>
-<body class="bg-slate-900 text-slate-200">
+<body class="bg-slate-950 text-slate-100 min-h-screen relative selection:bg-sky-500/30 selection:text-sky-200">
 
-    <!-- Custom Cursor Elements -->
-    <div class="cursor-dot"></div>
-    <div class="cursor-outline"></div>
+    <!-- Ambient Cursor Glow (A11y Friendly) -->
+    <div class="cursor-glow"></div>
 
     <!-- Header & Navigation -->
-    <header class="bg-slate-900/80 backdrop-blur-sm sticky top-0 z-50 transition-shadow duration-300">
+    <header class="bg-slate-950/85 backdrop-blur-md sticky top-0 z-50 border-b border-slate-800/80 transition-all duration-300">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <!-- === EDIT YOUR NAME HERE === -->
-            <a href="#" class="text-xl font-bold text-white">Mani Golzary</a>
-            <div class="hidden md:flex space-x-6 text-slate-300">
-                <a href="#about" class="hover:text-sky-400 transition-colors">About</a>
-                <a href="#projects" class="hover:text-sky-400 transition-colors">Projects</a>
-                <a href="#skills" class="hover:text-sky-400 transition-colors">Skills</a>
-                <a href="#contact" class="hover:text-sky-400 transition-colors">Contact</a>
+            <a href="#" class="flex items-center space-x-2.5 text-xl font-extrabold text-white tracking-tight group">
+                <span class="w-9 h-9 rounded-xl bg-gradient-to-tr from-sky-500 via-indigo-500 to-purple-600 flex items-center justify-center text-white text-base font-black shadow-lg shadow-sky-500/25 group-hover:scale-105 transition-transform">M</span>
+                <span class="group-hover:text-sky-400 transition-colors">Mani Golzary</span>
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-7 text-sm font-medium text-slate-300">
+                <a href="#about" class="hover:text-sky-400 transition-colors">About & Vision</a>
+                <a href="#spark" class="text-teal-300 hover:text-teal-200 transition-colors flex items-center gap-1.5 font-semibold">
+                    <span class="w-2 h-2 rounded-full bg-teal-400 animate-pulse"></span>
+                    WeLearn SPARK
+                </a>
+                <a href="#projects" class="hover:text-sky-400 transition-colors">Projects & Work</a>
+                <a href="#pillars" class="hover:text-sky-400 transition-colors">Four Pillars</a>
+                <a href="#skills" class="hover:text-sky-400 transition-colors">Expertise</a>
+                <a href="#contact" class="bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold px-4 py-2 rounded-full transition-all shadow-md shadow-sky-500/20 hover:scale-105">
+                    Let's Connect
+                </a>
             </div>
-            <button id="mobile-menu-button" class="md:hidden text-white">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="mobile-menu-button" aria-label="Toggle Navigation Menu" class="md:hidden text-white p-2 rounded-lg bg-slate-900 border border-slate-800 focus:outline-none focus:ring-2 focus:ring-sky-500">
+                <svg id="hamburger-icon" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+                <svg id="close-icon" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                 </svg>
             </button>
         </nav>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2">
-            <a href="#about" class="block hover:text-sky-400 transition-colors">About</a>
-            <a href="#projects" class="block hover:text-sky-400 transition-colors">Projects</a>
-            <a href="#skills" class="block hover:text-sky-400 transition-colors">Skills</a>
-            <a href="#contact" class="block hover:text-sky-400 transition-colors">Contact</a>
+
+        <!-- Mobile Menu Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-6 pt-2 bg-slate-950/95 border-b border-slate-800 space-y-3 text-base">
+            <a href="#about" class="block py-2 text-slate-300 hover:text-sky-400 border-b border-slate-800/60">About & Vision</a>
+            <a href="#spark" class="block py-2 text-teal-400 font-semibold border-b border-slate-800/60">WeLearn SPARK (AI Platform)</a>
+            <a href="#projects" class="block py-2 text-slate-300 hover:text-sky-400 border-b border-slate-800/60">Projects & Work</a>
+            <a href="#pillars" class="block py-2 text-slate-300 hover:text-sky-400 border-b border-slate-800/60">Four Pillars</a>
+            <a href="#skills" class="block py-2 text-slate-300 hover:text-sky-400 border-b border-slate-800/60">Skills & Tech Stack</a>
+            <a href="#contact" class="block py-2 text-sky-400 font-bold">Contact & Collaborate</a>
         </div>
     </header>
 
-    <main class="container mx-auto px-6">
+    <main class="container mx-auto px-6 max-w-6xl relative z-10">
+        
         <!-- Hero Section -->
-        <section id="hero" class="relative w-full py-24 md:py-32 -mx-6">
-            <!-- Slideshow container -->
-            <div class="relative h-96 md:h-[450px] overflow-hidden rounded-lg">
-                <!-- Slide 1 -->
-                <div class="slides fade hidden">
-                    <img src="https://images.pexels.com/photos/1110065/pexels-photo-1110065.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-black/60 flex flex-col items-center justify-center text-center p-4">
-                        <h2 class="text-3xl md:text-5xl font-bold text-white leading-tight">Kinetic Awareness — Moving Art for Change</h2>
-                        <a href="kinetic-awareness.html" class="mt-8 inline-block bg-sky-500 text-white font-bold py-3 px-8 rounded-full hover:bg-sky-600 transition-transform hover:scale-105">Learn More</a>
+        <section id="hero" class="py-16 md:py-24 border-b border-slate-800/80">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Hero Copy -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-slate-900 border border-sky-500/30 text-sky-300 text-xs font-semibold shadow-sm">
+                        <span class="w-2 h-2 rounded-full bg-sky-400 animate-ping"></span>
+                        <span>STEAM &bull; AI EDTECH &bull; WEB &bull; MARKETING & SEO</span>
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-tight tracking-tight">
+                        Shaping the Future of Learning & Digital Innovation.
+                    </h1>
+
+                    <p class="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl">
+                        I am <strong class="text-white">Mani Golzary</strong> — an Innovation Coach, Full-Stack Web Developer, and Growth Strategist. I engineer transformative experiences: from <strong class="text-teal-300">WeLearn SPARK</strong> (personalized AI-driven learning) and rich interactive web applications to data-backed SEO and project-based STEAM curricula.
+                    </p>
+
+                    <!-- Hero Call to Actions -->
+                    <div class="flex flex-wrap gap-4 pt-2">
+                        <a href="#spark" class="inline-flex items-center space-x-2 bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-400 hover:to-cyan-400 text-slate-950 font-bold px-6 py-3.5 rounded-xl shadow-lg shadow-teal-500/25 transition-all hover:scale-105 text-sm md:text-base">
+                            <svg class="w-5 h-5 text-slate-950" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                            <span>Explore WeLearn SPARK</span>
+                        </a>
+                        <a href="#projects" class="inline-flex items-center space-x-2 bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 font-semibold px-6 py-3.5 rounded-xl transition-all hover:border-slate-500 text-sm md:text-base">
+                            <span>View All Projects</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </a>
+                    </div>
+
+                    <!-- Quick Verified Capabilities Badges -->
+                    <div class="pt-4 flex flex-wrap items-center gap-4 text-xs text-slate-400">
+                        <span class="flex items-center gap-1.5"><span class="text-emerald-400">&check;</span> AI-Powered Scaffolding</span>
+                        <span class="flex items-center gap-1.5"><span class="text-emerald-400">&check;</span> Full-Stack Web Development</span>
+                        <span class="flex items-center gap-1.5"><span class="text-emerald-400">&check;</span> Technical SEO & Analytics</span>
+                        <span class="flex items-center gap-1.5"><span class="text-emerald-400">&check;</span> STEAM & PBL Design</span>
                     </div>
                 </div>
 
-                <!-- Slide 2 -->
-                <div class="slides fade hidden">
-                    <img src="https://images.pexels.com/photos/18059427/pexels-photo-18059427/free-photo-of-a-futuristic-car-driving-on-a-road-in-the-sky.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="w-full h-full object-cover">
-                     <div class="absolute inset-0 bg-black/60 flex flex-col items-center justify-center text-center p-4">
-                        <h2 class="text-3xl md:text-5xl font-bold text-white leading-tight">Designing the Future of Transportation</h2>
-                        <a href="future-of-transportation.html" class="mt-8 inline-block bg-sky-500 text-white font-bold py-3 px-8 rounded-full hover:bg-sky-600 transition-transform hover:scale-105">Learn More</a>
+                <!-- Right Hero Interactive Visual Slideshow -->
+                <div class="lg:col-span-5">
+                    <div class="relative rounded-2xl overflow-hidden border border-slate-800 shadow-2xl shadow-sky-950/40 bg-slate-900">
+                        <!-- Slide 1: WeLearn SPARK -->
+                        <div class="slide active-slide relative h-80 sm:h-96">
+                            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80" alt="WeLearn SPARK AI Platform" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent p-6 flex flex-col justify-end">
+                                <span class="text-teal-400 font-mono text-xs uppercase tracking-wider font-bold mb-1">Featured Flagship</span>
+                                <h3 class="text-xl font-bold text-white mb-2">WeLearn SPARK: AI Learning Platform</h3>
+                                <p class="text-xs text-slate-300 line-clamp-2 mb-3">Adaptive intelligence, real-time STEM simulations, and individual student mastery tracking.</p>
+                                <a href="welearn-spark.html" class="inline-flex items-center text-xs font-bold text-teal-300 hover:text-white">Read Case Study &rarr;</a>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2: Modern Web & Technical SEO -->
+                        <div class="slide relative h-80 sm:h-96">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Web Development and SEO Architecture" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent p-6 flex flex-col justify-end">
+                                <span class="text-indigo-400 font-mono text-xs uppercase tracking-wider font-bold mb-1">Web & Growth</span>
+                                <h3 class="text-xl font-bold text-white mb-2">Web Dev, Marketing & Technical SEO</h3>
+                                <p class="text-xs text-slate-300 line-clamp-2 mb-3">Modern performant web architecture, Core Web Vitals excellence, and data-backed conversion funnels.</p>
+                                <a href="#projects" class="inline-flex items-center text-xs font-bold text-indigo-300 hover:text-white">Explore Engineering &rarr;</a>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3: Kinetic Awareness STEAM -->
+                        <div class="slide relative h-80 sm:h-96">
+                            <img src="https://images.pexels.com/photos/1110065/pexels-photo-1110065.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Kinetic Awareness STEAM Innovation" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent p-6 flex flex-col justify-end">
+                                <span class="text-sky-400 font-mono text-xs uppercase tracking-wider font-bold mb-1">STEAM & PBL</span>
+                                <h3 class="text-xl font-bold text-white mb-2">Kinetic Awareness & Mobility Design</h3>
+                                <p class="text-xs text-slate-300 line-clamp-2 mb-3">Hands-on physics, autonomous vehicle prototyping, and environmental design thinking.</p>
+                                <a href="kinetic-awareness.html" class="inline-flex items-center text-xs font-bold text-sky-300 hover:text-white">Discover Program &rarr;</a>
+                            </div>
+                        </div>
+
+                        <!-- Slideshow controls -->
+                        <div class="absolute top-4 right-4 flex space-x-1.5 z-20">
+                            <button id="prev-slide" aria-label="Previous Slide" class="w-8 h-8 rounded-full bg-slate-950/70 hover:bg-slate-900 border border-slate-700 text-white flex items-center justify-center text-xs transition-colors">&#10094;</button>
+                            <button id="next-slide" aria-label="Next Slide" class="w-8 h-8 rounded-full bg-slate-950/70 hover:bg-slate-900 border border-slate-700 text-white flex items-center justify-center text-xs transition-colors">&#10095;</button>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Slide 3 -->
-                <div class="slides fade hidden">
-                     <img src="https://images.pexels.com/photos/797793/pexels-photo-797793.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="w-full h-full object-cover">
-                     <div class="absolute inset-0 bg-black/60 flex flex-col items-center justify-center text-center p-4">
-                        <h2 class="text-3xl md:text-5xl font-bold text-white leading-tight">Sustainable Innovations</h2>
-                        <a href="sustainable-innovations.html" class="mt-8 inline-block bg-sky-500 text-white font-bold py-3 px-8 rounded-full hover:bg-sky-600 transition-transform hover:scale-105">Learn More</a>
-                    </div>
-                </div>
-
-                <!-- Slide 4 -->
-                <div class="slides fade hidden">
-                     <img src="https://images.pexels.com/photos/5011647/pexels-photo-5011647.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="w-full h-full object-cover">
-                     <div class="absolute inset-0 bg-black/60 flex flex-col items-center justify-center text-center p-4">
-                        <h2 class="text-3xl md:text-5xl font-bold text-white leading-tight">InnoVision: Empower Your Ideas</h2>
-                        <a href="innovision.html" class="mt-8 inline-block bg-sky-500 text-white font-bold py-3 px-8 rounded-full hover:bg-sky-600 transition-transform hover:scale-105">Learn More</a>
-                    </div>
-                </div>
-
-                <!-- Prev/Next buttons -->
-                <a class="absolute top-1/2 left-4 -translate-y-1/2 cursor-pointer text-white p-4 bg-black/30 rounded-full hover:bg-black/50" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="absolute top-1/2 right-4 -translate-y-1/2 cursor-pointer text-white p-4 bg-black/30 rounded-full hover:bg-black/50" onclick="plusSlides(1)">&#10095;</a>
             </div>
-            
-            <div class="text-center mt-4">
-                <span class="dot inline-block w-3 h-3 bg-slate-600 rounded-full cursor-pointer mx-1" onclick="currentSlide(1)"></span>
-                <span class="dot inline-block w-3 h-3 bg-slate-600 rounded-full cursor-pointer mx-1" onclick="currentSlide(2)"></span>
-                <span class="dot inline-block w-3 h-3 bg-slate-600 rounded-full cursor-pointer mx-1" onclick="currentSlide(3)"></span>
-                <span class="dot inline-block w-3 h-3 bg-slate-600 rounded-full cursor-pointer mx-1" onclick="currentSlide(4)"></span>
+
+            <!-- Live Metrics Counter Bar -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 pt-10 border-t border-slate-900">
+                <div class="glass-panel p-5 rounded-xl text-center">
+                    <div class="text-3xl lg:text-4xl font-black text-sky-400">10+</div>
+                    <div class="text-xs uppercase font-semibold text-slate-400 tracking-wider mt-1">STEAM & Tech Curricula</div>
+                </div>
+                <div class="glass-panel p-5 rounded-xl text-center">
+                    <div class="text-3xl lg:text-4xl font-black text-teal-400">1,500+</div>
+                    <div class="text-xs uppercase font-semibold text-slate-400 tracking-wider mt-1">Learners & Educators</div>
+                </div>
+                <div class="glass-panel p-5 rounded-xl text-center">
+                    <div class="text-3xl lg:text-4xl font-black text-indigo-400">100%</div>
+                    <div class="text-xs uppercase font-semibold text-slate-400 tracking-wider mt-1">PBL & Adaptive AI</div>
+                </div>
+                <div class="glass-panel p-5 rounded-xl text-center">
+                    <div class="text-3xl lg:text-4xl font-black text-purple-400">4 Pillars</div>
+                    <div class="text-xs uppercase font-semibold text-slate-400 tracking-wider mt-1">AI, Web, Growth, STEAM</div>
+                </div>
             </div>
         </section>
 
-        <!-- About Me Section -->
-        <section id="about" class="fade-in-section py-16 md:py-24 border-t border-slate-800">
-            <h2 class="text-3xl font-bold text-white mb-8">My Mission</h2>
-             <!-- === EDIT YOUR "ABOUT ME" TEXT HERE === -->
-            <div class="max-w-3xl mx-auto text-slate-300 text-lg leading-relaxed space-y-4">
-                <p>
-                    My work is dedicated to transforming education from passive listening into active creation. I design dynamic learning journeys where youth explore STEAM concepts, harness the power of AI to deepen their knowledge, and connect their passions to real-world challenges through innovation and entrepreneurship. My goal is simple: to cultivate a generation of informed, purposeful, and impactful global citizens.
+        <!-- About & Philosophy Section -->
+        <section id="about" class="fade-in-section py-20 border-b border-slate-800/80">
+            <div class="grid md:grid-cols-12 gap-12 items-center">
+                <div class="md:col-span-6 space-y-6">
+                    <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-slate-900 border border-slate-700 text-slate-300 text-xs font-semibold">
+                        <span>THE MISSION</span>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white leading-tight">
+                        Transforming Education from Passive Reception into Active Creation.
+                    </h2>
+                    <p class="text-slate-300 leading-relaxed text-base md:text-lg">
+                        My work bridges deep pedagogical theory, cutting-edge artificial intelligence, and modern web software. Whether designing the adaptive scaffolding inside <strong class="text-teal-300">WeLearn SPARK</strong>, leading high-engagement STEAM labs, or architecting SEO-optimized digital platforms, my overarching goal is cultivating purposeful, scientifically-literate, and technologically capable global changemakers.
+                    </p>
+                    <p class="text-slate-400 leading-relaxed text-sm md:text-base">
+                        By integrating inquiry-driven Project-Based Learning (PBL) with real-time digital simulations and scalable web development, learners don't just memorize formulas—they build kinetic art, simulate autonomous fleets, engineer climate resilience solutions, and launch real ideas.
+                    </p>
+                </div>
+
+                <div class="md:col-span-6 space-y-4">
+                    <div class="glass-panel p-6 rounded-xl border-l-4 border-sky-500">
+                        <h4 class="text-lg font-bold text-white mb-1">Inquiry & Project-Based Learning (PBL)</h4>
+                        <p class="text-sm text-slate-400">Moving past rote memorization into real-world challenges where students experiment, iterate, and pitch tangible solutions.</p>
+                    </div>
+
+                    <div class="glass-panel p-6 rounded-xl border-l-4 border-teal-500">
+                        <h4 class="text-lg font-bold text-white mb-1">Pedagogical AI & Simulation Engines</h4>
+                        <p class="text-sm text-slate-400">Using AI as an intellectual sparring partner (as in WeLearn SPARK) that challenges assumptions and differentiates dynamically.</p>
+                    </div>
+
+                    <div class="glass-panel p-6 rounded-xl border-l-4 border-indigo-500">
+                        <h4 class="text-lg font-bold text-white mb-1">Modern Web Engineering & Performance</h4>
+                        <p class="text-sm text-slate-400">Building fast, accessible, responsive digital learning tools and interactive dashboards with modern web standards.</p>
+                    </div>
+
+                    <div class="glass-panel p-6 rounded-xl border-l-4 border-purple-500">
+                        <h4 class="text-lg font-bold text-white mb-1">Strategic Growth, Marketing & SEO</h4>
+                        <p class="text-sm text-slate-400">Connecting educational initiatives to wider audiences through technical SEO, structured data, and high-impact digital storytelling.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Flagship: WeLearn SPARK Spotlight Banner -->
+        <section id="spark" class="fade-in-section py-20 border-b border-slate-800/80">
+            <div class="relative rounded-3xl overflow-hidden p-8 md:p-12 border border-teal-500/30 bg-gradient-to-br from-slate-900 via-slate-950 to-teal-950/30 shadow-2xl shadow-teal-950/30">
+                <div class="relative z-10 grid lg:grid-cols-12 gap-8 items-center">
+                    <div class="lg:col-span-7 space-y-5">
+                        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-teal-500/10 border border-teal-500/40 text-teal-300 text-xs font-bold uppercase tracking-wider">
+                            <span class="w-2 h-2 rounded-full bg-teal-400 animate-ping"></span>
+                            <span>Flagship AI Platform</span>
+                        </div>
+                        <h2 class="text-3xl md:text-5xl font-extrabold text-white leading-tight">
+                            WeLearn SPARK
+                        </h2>
+                        <h3 class="text-xl md:text-2xl font-bold gradient-accent">
+                            Personalized AI-Powered Learning Platform
+                        </h3>
+                        <p class="text-slate-300 text-base md:text-lg leading-relaxed">
+                            SPARK transforms education into an adaptive, student-driven voyage of discovery. Combining generative pedagogical scaffolding, interactive STEM simulations (microclimates, autonomous systems), and individualized mastery paths tailored for gifted and twice-exceptional learners.
+                        </p>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2 text-xs">
+                            <div class="bg-slate-900/80 border border-slate-800 p-3 rounded-lg">
+                                <span class="text-teal-400 font-bold block text-sm">Adaptive AI</span>
+                                <span class="text-slate-400">Socratic guidance</span>
+                            </div>
+                            <div class="bg-slate-900/80 border border-slate-800 p-3 rounded-lg">
+                                <span class="text-cyan-400 font-bold block text-sm">Simulation Engine</span>
+                                <span class="text-slate-400">Interactive sandbox</span>
+                            </div>
+                            <div class="bg-slate-900/80 border border-slate-800 p-3 rounded-lg">
+                                <span class="text-indigo-400 font-bold block text-sm">Web & SEO Ready</span>
+                                <span class="text-slate-400">Scalable architecture</span>
+                            </div>
+                        </div>
+                        <div class="pt-4 flex flex-wrap gap-4">
+                            <a href="welearn-spark.html" class="inline-flex items-center space-x-2 bg-teal-500 hover:bg-teal-400 text-slate-950 font-bold px-7 py-3 rounded-xl transition-all hover:scale-105 shadow-lg shadow-teal-500/25">
+                                <span>Read Full SPARK Case Study</span>
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                            </a>
+                            <a href="welearn-spark.html#interactive-simulator" class="inline-flex items-center space-x-2 bg-slate-900 hover:bg-slate-800 text-teal-300 border border-teal-500/40 font-semibold px-5 py-3 rounded-xl transition-colors">
+                                <span>Test Live Simulation Widget</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-5">
+                        <div class="relative rounded-2xl overflow-hidden border border-slate-800 shadow-2xl">
+                            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80" alt="WeLearn SPARK AI Platform Preview" class="w-full h-80 object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent flex items-end p-6">
+                                <div class="bg-slate-950/80 backdrop-blur-md p-3.5 rounded-xl border border-slate-800 w-full text-xs text-slate-300">
+                                    <div class="flex items-center justify-between mb-1">
+                                        <span class="font-bold text-white">SPARK AI Engine</span>
+                                        <span class="text-teal-400 font-mono">Status: Active</span>
+                                    </div>
+                                    <p class="text-slate-400">Real-time scaffolding, stateful simulation sync & multi-tiered inquiry modules.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects & Portfolio Section -->
+        <section id="projects" class="fade-in-section py-20 border-b border-slate-800/80">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-slate-900 border border-slate-700 text-slate-300 text-xs font-semibold mb-3">
+                    <span>PORTFOLIO WORK</span>
+                </div>
+                <h2 class="text-3xl md:text-5xl font-black text-white tracking-tight mb-4">
+                    Programs, Web Apps & Innovations
+                </h2>
+                <p class="text-slate-400 text-base md:text-lg">
+                    Filter across my recent work in Artificial Intelligence, Full-Stack Web Development, Digital Marketing & SEO, and hands-on STEAM/PBL curriculum architecture.
+                </p>
+
+                <!-- Category Filter Tabs -->
+                <div class="flex flex-wrap justify-center gap-2 mt-8">
+                    <button class="filter-btn active-filter px-4 py-2 rounded-full text-xs font-bold transition-all bg-sky-500 text-slate-950 shadow-md shadow-sky-500/20" data-filter="all">All Disciplines</button>
+                    <button class="filter-btn px-4 py-2 rounded-full text-xs font-bold transition-all bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800" data-filter="ai-edtech">AI & EdTech Platforms</button>
+                    <button class="filter-btn px-4 py-2 rounded-full text-xs font-bold transition-all bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800" data-filter="web-dev">Web Development</button>
+                    <button class="filter-btn px-4 py-2 rounded-full text-xs font-bold transition-all bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800" data-filter="marketing-seo">Marketing & SEO</button>
+                    <button class="filter-btn px-4 py-2 rounded-full text-xs font-bold transition-all bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800" data-filter="steam-pbl">STEAM & PBL</button>
+                </div>
+            </div>
+
+            <!-- Projects Grid -->
+            <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Project 1: WeLearn SPARK (Flagship) -->
+                <div class="project-item group" data-category="ai-edtech web-dev">
+                    <div class="glass-panel rounded-2xl overflow-hidden h-full flex flex-col border border-teal-500/30">
+                        <div class="relative overflow-hidden h-52">
+                            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80" alt="WeLearn SPARK Platform" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 left-3 bg-teal-500 text-slate-950 text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider shadow">Featured Flagship</span>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col justify-between">
+                            <div>
+                                <div class="text-xs font-semibold text-teal-400 uppercase tracking-wider mb-1">AI & EdTech Platform</div>
+                                <h3 class="text-xl font-bold text-white mb-2 group-hover:text-teal-300 transition-colors">WeLearn SPARK: Personalized AI Learning</h3>
+                                <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                                    Adaptive pedagogical intelligence, real-time climate/physics simulation sandboxes, and student-paced scaffolding designed for deep mastery.
+                                </p>
+                            </div>
+                            <div>
+                                <div class="flex flex-wrap gap-1.5 mb-5">
+                                    <span class="bg-teal-950/60 text-teal-300 border border-teal-500/20 text-[11px] font-semibold px-2 py-0.5 rounded-md">Generative AI</span>
+                                    <span class="bg-slate-800 text-slate-300 text-[11px] font-semibold px-2 py-0.5 rounded-md">Simulations</span>
+                                    <span class="bg-slate-800 text-slate-300 text-[11px] font-semibold px-2 py-0.5 rounded-md">Adaptive PBL</span>
+                                </div>
+                                <a href="welearn-spark.html" class="inline-flex items-center text-sm font-bold text-teal-400 hover:text-teal-300">
+                                    <span>Explore Case Study</span>
+                                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Full-Stack Web Development & Interactive Tools -->
+                <div class="project-item group" data-category="web-dev">
+                    <div class="glass-panel rounded-2xl overflow-hidden h-full flex flex-col">
+                        <div class="relative overflow-hidden h-52">
+                            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=80" alt="Modern Web Development and UI/UX" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 left-3 bg-sky-500 text-slate-950 text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider shadow">Web Engineering</span>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col justify-between">
+                            <div>
+                                <div class="text-xs font-semibold text-sky-400 uppercase tracking-wider mb-1">Modern Web Development</div>
+                                <h3 class="text-xl font-bold text-white mb-2 group-hover:text-sky-300 transition-colors">Interactive Web Apps & High-Speed Frontends</h3>
+                                <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                                    Crafting responsive, accessible web interfaces with semantic HTML5, modern Tailwind CSS, client-side simulation engines, and sub-second Core Web Vitals.
+                                </p>
+                            </div>
+                            <div>
+                                <div class="flex flex-wrap gap-1.5 mb-5">
+                                    <span class="bg-sky-950/60 text-sky-300 border border-sky-500/20 text-[11px] font-semibold px-2 py-0.5 rounded-md">HTML5 & JS ES6+</span>
+                                    <span class="bg-slate-800 text-slate-300 text-[11px] font-semibold px-2 py-0.5 rounded-md">Tailwind CSS</span>
+                                    <span class="bg-slate-800 text-slate-300 text-[11px] font-semibold px-2 py-0.5 rounded-md">Accessible UI</span>
+                                </div>
+                                <a href="welearn-spark.html#interactive-simulator" class="inline-flex items-center text-sm font-bold text-sky-400 hover:text-sky-300">
+                                    <span>Inspect Interactive Demo</span>
+                                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Marketing & Growth Engine -->
+                <div class="project-item group" data-category="marketing-seo">
+                    <div class="glass-panel rounded-2xl overflow-hidden h-full flex flex-col">
+                        <div class="relative overflow-hidden h-52">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" alt="Digital Marketing and Growth Funnels" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 left-3 bg-purple-500 text-slate-950 text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider shadow">Growth & Strategy</span>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col justify-between">
+                            <div>
+                                <div class="text-xs font-semibold text-purple-400 uppercase tracking-wider mb-1">Growth Marketing</div>
+                                <h3 class="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">EdTech Audience Acquisition & Conversion Funnels</h3>
+                                <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                                    Architecting educational branding, parent/school conversion funnels, multi-channel campaigns, and narrative storytelling that drives organic adoption.
+                                </p>
+                            </div>
+                            <div>
+                                <div class="flex flex-wrap gap-1.5 mb-5">
+                                    <span class="bg-purple-950/60 text-purple-300 border border-purple-500/20 text-[11px] font-semibold px-2 py-0.5 rounded-md">Funnel Strategy</span>
+                                    <span class="bg-slate-800 text-slate-300 text-[11px] font-semibold px-2 py-0.5 rounded-md">Growth Marketing</span>
+                                    <span class="bg-slate-800 text-slate-300 text-[11px] font-semibold px-2 py-0.5 rounded-md">Analytics</span>
+                                </div>
+                                <a href="#contact" class="inline-flex items-center text-sm font-bold text-purple-400 hover:text-purple-300">
+                                    <span>Discuss Growth Campaigns</span>
+                                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: Technical SEO & Search Visibility Architecture -->
+                <div class="project-item group" data-category="marketing-seo web-dev">
+                    <div class="glass-panel rounded-2xl overflow-hidden h-full flex flex-col">
+                        <div class="relative overflow-hidden h-52">
+                            <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=600&q=80" alt="Technical SEO and Schema Architecture" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 left-3 bg-indigo-500 text-slate-950 text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider shadow">Technical SEO</span>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col justify-between">
+                            <div>
+                                <div class="text-xs font-semibold text-indigo-400 uppercase tracking-wider mb-1">Search Engine Optimization</div>
+                                <h3 class="text-xl font-bold text-white mb-2 group-hover:text-indigo-300 transition-colors">Technical SEO & Semantic Visibility Architecture</h3>
+                                <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                                    Implementation of Schema.org rich snippets, Core Web Vitals optimization, programmatic topical clusters, and high-ranking organic discovery systems.
+                                </p>
+                            </div>
+                            <div>
+                                <div class="flex flex-wrap gap-1.5 mb-5">
+                                    <span class="bg-indigo-950/60 text-indigo-300 border border-indigo-500/20 text-[11px] font-semibold px-2 py-0.5 rounded-md">Schema JSON-LD</span>
+                                    <span class="bg-slate-800 text-slate-300 text-[11px] font-semibold px-2 py-0.5 rounded-md">Core Web Vitals</span>
+                                    <span class="bg-slate-800 text-slate-300 text-[11px] font-semibold px-2 py-0.5 rounded-md">Search Console</span>
+                                </div>
+                                <a href="#contact" class="inline-flex items-center text-sm font-bold text-indigo-400 hover:text-indigo-300">
+                                    <span>Audit Your SEO</span>
+                                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5: Kinetic Awareness (STEAM & Motion Physics) -->
+                <div class="project-item group" data-category="steam-pbl">
+                    <div class="glass-panel rounded-2xl overflow-hidden h-full flex flex-col">
+                        <div class="relative overflow-hidden h-52">
+                            <img src="https://images.pexels.com/photos/1110065/pexels-photo-1110065.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Kinetic Awareness Program" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 left-3 bg-sky-500 text-slate-950 text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider shadow">STEAM & Physics</span>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col justify-between">
+                            <div>
+                                <div class="text-xs font-semibold text-sky-400 uppercase tracking-wider mb-1">STEAM & Environmental Action</div>
+                                <h3 class="text-xl font-bold text-white mb-2 group-hover:text-sky-300 transition-colors">Kinetic Awareness: Moving Art for Change</h3>
+                                <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                                    A 9-week journey exploring classical mechanics and kinetic sculpture engineering, culminating in a student-curated exhibition raising environmental action.
+                                </p>
+                            </div>
+                            <div>
+                                <div class="flex flex-wrap gap-1.5 mb-5">
+                                    <span class="bg-sky-950/60 text-sky-300 border border-sky-500/20 text-[11px] font-semibold px-2 py-0.5 rounded-md">Physics of Motion</span>
+                                    <span class="bg-slate-800 text-slate-300 text-[11px] font-semibold px-2 py-0.5 rounded-md">Sculpture Design</span>
+                                    <span class="bg-slate-800 text-slate-300 text-[11px] font-semibold px-2 py-0.5 rounded-md">9 Weeks</span>
+                                </div>
+                                <a href="kinetic-awareness.html" class="inline-flex items-center text-sm font-bold text-sky-400 hover:text-sky-300">
+                                    <span>View Program Details</span>
+                                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6: Future of Transportation -->
+                <div class="project-item group" data-category="steam-pbl">
+                    <div class="glass-panel rounded-2xl overflow-hidden h-full flex flex-col">
+                        <div class="relative overflow-hidden h-52">
+                            <img src="https://images.pexels.com/photos/18059427/pexels-photo-18059427/free-photo-of-a-futuristic-car-driving-on-a-road-in-the-sky.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Future of Transportation Program" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 left-3 bg-emerald-500 text-slate-950 text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider shadow">Autonomous Tech</span>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col justify-between">
+                            <div>
+                                <div class="text-xs font-semibold text-emerald-400 uppercase tracking-wider mb-1">Sustainable Mobility</div>
+                                <h3 class="text-xl font-bold text-white mb-2 group-hover:text-emerald-300 transition-colors">Designing the Future of Transportation</h3>
+                                <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                                    Students dive into autonomous navigation algorithms, nature-inspired aerodynamic design, and alternative propulsion to pitch future mobility solutions.
+                                </p>
+                            </div>
+                            <div>
+                                <div class="flex flex-wrap gap-1.5 mb-5">
+                                    <span class="bg-emerald-950/60 text-emerald-300 border border-emerald-500/20 text-[11px] font-semibold px-2 py-0.5 rounded-md">Autonomous Vessels</span>
+                                    <span class="bg-slate-800 text-slate-300 text-[11px] font-semibold px-2 py-0.5 rounded-md">Biomimicry</span>
+                                    <span class="bg-slate-800 text-slate-300 text-[11px] font-semibold px-2 py-0.5 rounded-md">Investor Pitch</span>
+                                </div>
+                                <a href="future-of-transportation.html" class="inline-flex items-center text-sm font-bold text-emerald-400 hover:text-emerald-300">
+                                    <span>View Program Details</span>
+                                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 7: Smart Sustainability & IoT -->
+                <div class="project-item group" data-category="steam-pbl ai-edtech">
+                    <div class="glass-panel rounded-2xl overflow-hidden h-full flex flex-col">
+                        <div class="relative overflow-hidden h-52">
+                            <img src="https://images.pexels.com/photos/797793/pexels-photo-797793.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Smart Sustainability and IoT" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 left-3 bg-cyan-500 text-slate-950 text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider shadow">IoT & Climate</span>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col justify-between">
+                            <div>
+                                <div class="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-1">Climate Tech & Hardware</div>
+                                <h3 class="text-xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors">Smart Sustainability: IoT Innovations</h3>
+                                <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                                    Bridging climate science, embedded sensors, and environmental entrepreneurship to build connected data systems tackling real environmental challenges.
+                                </p>
+                            </div>
+                            <div>
+                                <div class="flex flex-wrap gap-1.5 mb-5">
+                                    <span class="bg-cyan-950/60 text-cyan-300 border border-cyan-500/20 text-[11px] font-semibold px-2 py-0.5 rounded-md">IoT Sensors</span>
+                                    <span class="bg-slate-800 text-slate-300 text-[11px] font-semibold px-2 py-0.5 rounded-md">Climate Data</span>
+                                    <span class="bg-slate-800 text-slate-300 text-[11px] font-semibold px-2 py-0.5 rounded-md">12 Weeks</span>
+                                </div>
+                                <a href="sustainable-innovations.html" class="inline-flex items-center text-sm font-bold text-cyan-400 hover:text-cyan-300">
+                                    <span>View Program Details</span>
+                                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 8: InnoVision -->
+                <div class="project-item group" data-category="steam-pbl">
+                    <div class="glass-panel rounded-2xl overflow-hidden h-full flex flex-col">
+                        <div class="relative overflow-hidden h-52">
+                            <img src="https://images.pexels.com/photos/5011647/pexels-photo-5011647.jpeg?auto=compress&cs=tinysrgb&w=600" alt="InnoVision Design Thinking" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 left-3 bg-rose-500 text-slate-950 text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider shadow">Design Thinking</span>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col justify-between">
+                            <div>
+                                <div class="text-xs font-semibold text-rose-400 uppercase tracking-wider mb-1">Interdisciplinary Incubation</div>
+                                <h3 class="text-xl font-bold text-white mb-2 group-hover:text-rose-300 transition-colors">InnoVision: Empower Your Ideas</h3>
+                                <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                                    A 14-week interdisciplinary design program where students choose innovation pathways, formulate hypotheses, test user assumptions, and showcase prototypes.
+                                </p>
+                            </div>
+                            <div>
+                                <div class="flex flex-wrap gap-1.5 mb-5">
+                                    <span class="bg-rose-950/60 text-rose-300 border border-rose-500/20 text-[11px] font-semibold px-2 py-0.5 rounded-md">Human-Centered UI</span>
+                                    <span class="bg-slate-800 text-slate-300 text-[11px] font-semibold px-2 py-0.5 rounded-md">Prototyping</span>
+                                    <span class="bg-slate-800 text-slate-300 text-[11px] font-semibold px-2 py-0.5 rounded-md">14 Weeks</span>
+                                </div>
+                                <a href="innovision.html" class="inline-flex items-center text-sm font-bold text-rose-400 hover:text-rose-300">
+                                    <span>View Program Details</span>
+                                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- The Four Pillars of Expertise Section -->
+        <section id="pillars" class="fade-in-section py-20 border-b border-slate-800/80">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-slate-900 border border-slate-700 text-slate-300 text-xs font-semibold mb-3">
+                    <span>METHODOLOGY</span>
+                </div>
+                <h2 class="text-3xl md:text-5xl font-black text-white tracking-tight mb-4">
+                    The Four Pillars of My Work
+                </h2>
+                <p class="text-slate-400 text-base md:text-lg">
+                    How engineering, artificial intelligence, growth strategy, and pedagogy converge to build scalable impact.
                 </p>
             </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Pillar 1 -->
+                <div class="glass-panel p-6 rounded-2xl flex flex-col justify-between border-t-2 border-t-teal-400">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-teal-500/10 border border-teal-500/30 flex items-center justify-center text-teal-400 mb-5">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">1. AI & EdTech Platforms</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                            Deploying pedagogical LLMs, adaptive knowledge graphs, and interactive simulation engines (as exemplified in WeLearn SPARK) that personalize learner mastery.
+                        </p>
+                    </div>
+                    <div class="text-xs text-teal-400 font-semibold">&bull; Socratic Scaffolding &bull; Adaptive Paths</div>
+                </div>
+
+                <!-- Pillar 2 -->
+                <div class="glass-panel p-6 rounded-2xl flex flex-col justify-between border-t-2 border-t-sky-400">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-sky-500/10 border border-sky-500/30 flex items-center justify-center text-sky-400 mb-5">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">2. Full-Stack Web Development</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                            Building responsive, highly performant web applications with clean architecture, accessible components, client-side math/simulation engines, and fast load times.
+                        </p>
+                    </div>
+                    <div class="text-xs text-sky-400 font-semibold">&bull; Semantic HTML5 &bull; Tailwind &bull; JS ES6+</div>
+                </div>
+
+                <!-- Pillar 3 -->
+                <div class="glass-panel p-6 rounded-2xl flex flex-col justify-between border-t-2 border-t-indigo-400">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center text-indigo-400 mb-5">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">3. Technical SEO & Growth</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                            Establishing high organic visibility via Schema.org entity structuring, Core Web Vitals optimization, programmatic keywords, and conversion-centered messaging.
+                        </p>
+                    </div>
+                    <div class="text-xs text-indigo-400 font-semibold">&bull; Schema.org &bull; CWV &bull; Funnel Growth</div>
+                </div>
+
+                <!-- Pillar 4 -->
+                <div class="glass-panel p-6 rounded-2xl flex flex-col justify-between border-t-2 border-t-purple-400">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 mb-5">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">4. STEAM & PBL Architecture</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                            Designing multi-week, interdisciplinary learning journeys combining physics, climate tech, robotics, and design thinking that empower students to invent.
+                        </p>
+                    </div>
+                    <div class="text-xs text-purple-400 font-semibold">&bull; Inquiry Curricula &bull; Teacher Training</div>
+                </div>
+            </div>
         </section>
 
-        <!-- Projects Section -->
-        <section id="projects" class="fade-in-section py-16 md:py-24 border-t border-slate-800">
-            <h2 class="text-3xl font-bold text-white mb-12 text-center">My Programs & Projects</h2>
+        <!-- Skills & Comprehensive Expertise Matrix -->
+        <section id="skills" class="fade-in-section py-20 border-b border-slate-800/80">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-slate-900 border border-slate-700 text-slate-300 text-xs font-semibold mb-3">
+                    <span>CAPABILITIES</span>
+                </div>
+                <h2 class="text-3xl md:text-5xl font-black text-white tracking-tight mb-4">
+                    Expertise & Toolset
+                </h2>
+                <p class="text-slate-400 text-base md:text-lg">
+                    A comprehensive overview of technical tools, pedagogical frameworks, and marketing systems.
+                </p>
+            </div>
+
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 
-                <!-- Project 1 Card -->
-                <a href="kinetic-awareness.html" class="block bg-slate-800 rounded-lg overflow-hidden shadow-lg transform hover:-translate-y-2 transition-transform duration-300 group">
-                    <div class="overflow-hidden">
-                        <img src="https://images.pexels.com/photos/1110065/pexels-photo-1110065.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Kinetic sculpture representing moving art" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                <!-- Category 1: AI & Educational Technology -->
+                <div class="glass-panel p-6 rounded-2xl">
+                    <h3 class="text-lg font-bold text-teal-300 mb-4 flex items-center gap-2">
+                        <span class="w-3 h-3 rounded-full bg-teal-400"></span>
+                        AI & Educational Technology
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-slate-800 text-slate-200 py-1.5 px-3 rounded-lg text-xs font-medium border border-slate-700">WeLearn SPARK Platform Architecture</span>
+                        <span class="bg-slate-800 text-slate-200 py-1.5 px-3 rounded-lg text-xs font-medium border border-slate-700">Pedagogical AI & Prompt Scaffolding</span>
+                        <span class="bg-slate-800 text-slate-200 py-1.5 px-3 rounded-lg text-xs font-medium border border-slate-700">Adaptive Learning Trajectories</span>
+                        <span class="bg-slate-800 text-slate-200 py-1.5 px-3 rounded-lg text-xs font-medium border border-slate-700">STEM Simulation Sandboxes</span>
+                        <span class="bg-slate-800 text-slate-200 py-1.5 px-3 rounded-lg text-xs font-medium border border-slate-700">Learner Mastery Analytics</span>
+                        <span class="bg-slate-800 text-slate-200 py-1.5 px-3 rounded-lg text-xs font-medium border border-slate-700">LMS Integration & Micro-Credentials</span>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-white mb-2">Kinetic Awareness — Moving Art for Change</h3>
-                        <p class="text-slate-400 mb-4">A 9-week program where students explore the physics of motion, culminating in an art event to raise environmental awareness and build interactive kinetic sculptures.</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="bg-sky-900 text-sky-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">STEAM</span>
-                            <span class="bg-sky-900 text-sky-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Environmental Action</span>
-                            <span class="bg-sky-900 text-sky-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Engineering Design</span>
-                        </div>
-                    </div>
-                </a>
+                </div>
 
-                <!-- Project 2 Card -->
-                 <a href="future-of-transportation.html" class="block bg-slate-800 rounded-lg overflow-hidden shadow-lg transform hover:-translate-y-2 transition-transform duration-300 group">
-                    <div class="overflow-hidden">
-                        <img src="https://images.pexels.com/photos/18059427/pexels-photo-18059427/free-photo-of-a-futuristic-car-driving-on-a-road-in-the-sky.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Futuristic transportation concept" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                <!-- Category 2: Web Engineering & UI/UX -->
+                <div class="glass-panel p-6 rounded-2xl">
+                    <h3 class="text-lg font-bold text-sky-300 mb-4 flex items-center gap-2">
+                        <span class="w-3 h-3 rounded-full bg-sky-400"></span>
+                        Modern Web Development & UI/UX
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-slate-800 text-slate-200 py-1.5 px-3 rounded-lg text-xs font-medium border border-slate-700">Semantic HTML5 & Modern CSS</span>
+                        <span class="bg-slate-800 text-slate-200 py-1.5 px-3 rounded-lg text-xs font-medium border border-slate-700">Tailwind CSS & Responsive Layouts</span>
+                        <span class="bg-slate-800 text-slate-200 py-1.5 px-3 rounded-lg text-xs font-medium border border-slate-700">JavaScript ES6+ & Interactive DOM</span>
+                        <span class="bg-slate-800 text-slate-200 py-1.5 px-3 rounded-lg text-xs font-medium border border-slate-700">Core Web Vitals Optimization</span>
+                        <span class="bg-slate-800 text-slate-200 py-1.5 px-3 rounded-lg text-xs font-medium border border-slate-700">WCAG Accessibility (a11y)</span>
+                        <span class="bg-slate-800 text-slate-200 py-1.5 px-3 rounded-lg text-xs font-medium border border-slate-700">Git, GitHub & Deployment Workflows</span>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-white mb-2">STEAM INNOVATION: Designing the Future of Transportation</h3>
-                        <p class="text-slate-400 mb-4">A multi-module journey where students explore sustainable energy and autonomous tech to design, develop, and pitch a nature-inspired, futuristic transportation concept.</p>
-                         <div class="flex flex-wrap gap-2">
-                            <span class="bg-teal-900 text-teal-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Transportation</span>
-                            <span class="bg-teal-900 text-teal-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Innovation</span>
-                            <span class="bg-teal-900 text-teal-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Design Thinking</span>
-                        </div>
-                    </div>
-                </a>
+                </div>
 
-                <!-- Project 3 Card -->
-                <a href="sustainable-innovations.html" class="block bg-slate-800 rounded-lg overflow-hidden shadow-lg transform hover:-translate-y-2 transition-transform duration-300 group">
-                    <div class="overflow-hidden">
-                        <img src="https://images.pexels.com/photos/797793/pexels-photo-797793.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Wind turbines representing sustainable energy innovation" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                <!-- Category 3: Marketing & Technical SEO -->
+                <div class="glass-panel p-6 rounded-2xl">
+                    <h3 class="text-lg font-bold text-indigo-300 mb-4 flex items-center gap-2">
+                        <span class="w-3 h-3 rounded-full bg-indigo-400"></span>
+                        Marketing & Technical SEO Strategy
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-slate-800 text-slate-200 py-1.5 px-3 rounded-lg text-xs font-medium border border-slate-700">Schema.org JSON-LD Structured Data</span>
+                        <span class="bg-slate-800 text-slate-200 py-1.5 px-3 rounded-lg text-xs font-medium border border-slate-700">Topical Authority & Content Strategy</span>
+                        <span class="bg-slate-800 text-slate-200 py-1.5 px-3 rounded-lg text-xs font-medium border border-slate-700">Google Search Console & GA4</span>
+                        <span class="bg-slate-800 text-slate-200 py-1.5 px-3 rounded-lg text-xs font-medium border border-slate-700">Onboarding Funnel Optimization</span>
+                        <span class="bg-slate-800 text-slate-200 py-1.5 px-3 rounded-lg text-xs font-medium border border-slate-700">Educational Product Marketing</span>
+                        <span class="bg-slate-800 text-slate-200 py-1.5 px-3 rounded-lg text-xs font-medium border border-slate-700">Conversion Rate Optimization (CRO)</span>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-white mb-2">Sustainable Innovations</h3>
-                        <p class="text-slate-400 mb-4">A multi-pathway course where students bridge climate science, technology, and entrepreneurship to become changemakers, using design thinking to solve real-world environmental challenges.</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="bg-indigo-900 text-indigo-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Climate Action</span>
-                            <span class="bg-indigo-900 text-indigo-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Technology</span>
-                            <span class="bg-indigo-900 text-indigo-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Entrepreneurship</span>
-                        </div>
-                    </div>
-                </a>
+                </div>
 
-                <!-- Project 4 Card -->
-                <a href="innovision.html" class="block bg-slate-800 rounded-lg overflow-hidden shadow-lg transform hover:-translate-y-2 transition-transform duration-300 group">
-                    <div class="overflow-hidden">
-                        <img src="https://images.pexels.com/photos/5011647/pexels-photo-5011647.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Abstract representation of innovation and ideas" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                <!-- Category 4: STEAM & Educational Innovation -->
+                <div class="glass-panel p-6 rounded-2xl">
+                    <h3 class="text-lg font-bold text-purple-300 mb-4 flex items-center gap-2">
+                        <span class="w-3 h-3 rounded-full bg-purple-400"></span>
+                        STEAM & Curriculum Architecture
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-slate-800 text-slate-200 py-1.5 px-3 rounded-lg text-xs font-medium border border-slate-700">Project-Based Learning (PBL)</span>
+                        <span class="bg-slate-800 text-slate-200 py-1.5 px-3 rounded-lg text-xs font-medium border border-slate-700">Design Thinking Facilitation</span>
+                        <span class="bg-slate-800 text-slate-200 py-1.5 px-3 rounded-lg text-xs font-medium border border-slate-700">Teacher Professional Development</span>
+                        <span class="bg-slate-800 text-slate-200 py-1.5 px-3 rounded-lg text-xs font-medium border border-slate-700">Robotics & IoT (Micro:bit, Arduino, VEX)</span>
+                        <span class="bg-slate-800 text-slate-200 py-1.5 px-3 rounded-lg text-xs font-medium border border-slate-700">3D Modeling & Rapid Prototyping</span>
+                        <span class="bg-slate-800 text-slate-200 py-1.5 px-3 rounded-lg text-xs font-medium border border-slate-700">Gifted & 2e Learner Mentorship</span>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-white mb-2">InnoVision: Empower Your Ideas</h3>
-                        <p class="text-slate-400 mb-4">A multi-phase program where students select a specialized "Innovation Pathway" and collaborate across disciplines to solve real-world challenges using the Design Thinking process.</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="bg-rose-900 text-rose-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Design Thinking</span>
-                            <span class="bg-rose-900 text-rose-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Interdisciplinary</span>
-                            <span class="bg-rose-900 text-rose-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Innovation</span>
-                        </div>
-                    </div>
-                </a>
+                </div>
+
             </div>
         </section>
 
-        <!-- Skills Section -->
-        <section id="skills" class="fade-in-section py-16 md:py-24 border-t border-slate-800">
-            <h2 class="text-3xl font-bold text-white mb-12 text-center">My Expertise</h2>
-            <!-- === EDIT YOUR SKILLS HERE === -->
-            <div class="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
-                <span class="bg-slate-700 text-slate-200 py-2 px-5 rounded-full font-medium transition-transform hover:scale-110 hover:bg-sky-500/30">Curriculum Design</span>
-                <span class="bg-slate-700 text-slate-200 py-2 px-5 rounded-full font-medium transition-transform hover:scale-110 hover:bg-sky-500/30">Project-Based Learning (PBL)</span>
-                <span class="bg-slate-700 text-slate-200 py-2 px-5 rounded-full font-medium transition-transform hover:scale-110 hover:bg-sky-500/30">STEAM Integration</span>
-                <span class="bg-slate-700 text-slate-200 py-2 px-5 rounded-full font-medium transition-transform hover:scale-110 hover:bg-sky-500/30">Teacher Training & PD</span>
-                <span class="bg-slate-700 text-slate-200 py-2 px-5 rounded-full font-medium transition-transform hover:scale-110 hover:bg-sky-500/30">Educational Technology</span>
-                <span class="bg-slate-700 text-slate-200 py-2 px-5 rounded-full font-medium transition-transform hover:scale-110 hover:bg-sky-500/30">Robotics (Lego, VEX)</span>
-                <span class="bg-slate-700 text-slate-200 py-2 px-5 rounded-full font-medium transition-transform hover:scale-110 hover:bg-sky-500/30">3D Printing & Modeling</span>
-                <span class="bg-slate-700 text-slate-200 py-2 px-5 rounded-full font-medium transition-transform hover:scale-110 hover:bg-sky-500/30">Coding (Scratch, Python)</span>
-                <span class="bg-slate-700 text-slate-200 py-2 px-5 rounded-full font-medium transition-transform hover:scale-110 hover:bg-sky-500/30">Design Thinking</span>
-            </div>
-        </section>
+        <!-- Contact & Collaboration Section -->
+        <section id="contact" class="fade-in-section py-20 text-center">
+            <div class="max-w-2xl mx-auto space-y-6">
+                <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-slate-900 border border-slate-700 text-slate-300 text-xs font-semibold">
+                    <span>GET IN TOUCH</span>
+                </div>
+                
+                <h2 class="text-3xl md:text-5xl font-black text-white tracking-tight">
+                    Let's Build Something Impactful.
+                </h2>
+                
+                <p class="text-slate-300 text-base md:text-lg leading-relaxed">
+                    Whether you are an educational institution wanting to deploy AI-driven PBL, a team looking to architect modern web applications, or a brand seeking data-driven marketing & SEO growth, let's collaborate.
+                </p>
 
-        <!-- Contact Section -->
-        <section id="contact" class="fade-in-section py-16 md:py-24 border-t border-slate-800 text-center">
-             <h2 class="text-3xl font-bold text-white mb-6">Let's Collaborate</h2>
-             <!-- === EDIT YOUR CONTACT INFO HERE === -->
-            <p class="max-w-xl mx-auto text-slate-300 text-lg mb-8">
-                I'm always excited to partner with schools and educators. If you'd like to bring innovative STEAM programs to your students, let's get in touch.
-            </p>
-            <a href="mailto:your.email@example.com" class="bg-sky-500 text-white font-bold py-3 px-8 rounded-full hover:bg-sky-600 transition-transform hover:scale-105 inline-block text-lg">
-                Email Me
-            </a>
-            <div class="flex justify-center space-x-6 mt-12">
-                <a href="#" class="text-slate-400 hover:text-white transition-transform hover:scale-110">
-                     <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.286 2.866 7.922 6.796 9.173.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" /></svg>
-                </a>
-                <a href="#" class="text-slate-400 hover:text-white transition-transform hover:scale-110">
-                     <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174.545.1.745-.236.745-.525 0-.258-.01-1.11-.015-2.01-3.015.655-3.653-1.31-3.653-1.31-.496-1.26-.97-1.597-.97-1.597-1.008-.688.076-.676.076-.676 1.115.078 1.703 1.145 1.703 1.145 1.007 1.723 2.634 1.223 3.277.935.102-.727.394-1.224.71-1.505-2.507-.285-5.14-1.253-5.14-5.57 0-1.23.44-2.232 1.15-3.02-.115-.286-.5-1.43.11-3.015 0 0 .94-.302 3.1 1.152.894-.248 1.85-.373 2.795-.378.945.005 1.901.13 2.795.378 2.16-1.454 3.095-1.152 3.095-1.152.61 1.585.225 2.73.11 3.015.71.788 1.15 1.79 1.15 3.02 0 4.328-2.637 5.28-5.15 5.56.405.348.765 1.03.765 2.075 0 1.5-.015 2.71-.015 3.075 0 .29.2.625.75.52C20.84 21.425 24 16.92 24 12 24 5.373 18.627 0 12 0z"/></svg>
-                </a>
+                <!-- Interactive Email Copy Card -->
+                <div class="bg-slate-900/90 border border-slate-800 p-6 rounded-2xl max-w-lg mx-auto shadow-xl">
+                    <p class="text-xs uppercase font-mono tracking-wider text-slate-400 mb-2">Direct Contact Email</p>
+                    <div class="flex items-center justify-between bg-slate-950 p-3 rounded-xl border border-slate-800">
+                        <span id="contact-email" class="text-slate-200 font-mono text-sm md:text-base select-all">mgolzary84@gmail.com</span>
+                        <button id="copy-email-btn" class="bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold px-3 py-1.5 rounded-lg text-xs transition-colors flex items-center gap-1">
+                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                            <span id="copy-btn-text">Copy</span>
+                        </button>
+                    </div>
+                    
+                    <div class="mt-4 flex justify-center gap-3">
+                        <a href="mailto:mgolzary84@gmail.com?subject=Inquiry%20from%20Portfolio" class="inline-flex items-center space-x-2 bg-gradient-to-r from-sky-500 to-indigo-600 hover:from-sky-400 hover:to-indigo-500 text-white font-bold py-2.5 px-6 rounded-xl transition-transform hover:scale-105 text-sm shadow-md shadow-sky-500/20">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                            <span>Open Mail Client</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Social & Professional Links -->
+                <div class="flex justify-center items-center space-x-6 pt-6">
+                    <a href="https://github.com/InnovationCoach" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-transform hover:scale-110 flex items-center gap-2 text-sm">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.286 2.866 7.922 6.796 9.173.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" /></svg>
+                        <span>GitHub Profile</span>
+                    </a>
+                    <a href="welearn-spark.html" class="text-slate-400 hover:text-teal-300 transition-transform hover:scale-110 flex items-center gap-2 text-sm">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                        <span>WeLearn SPARK Platform</span>
+                    </a>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer class="text-center py-8 border-t border-slate-800">
-        <p class="text-slate-500">&copy; 2025 Mani Golzary. All Rights Reserved.</p>
+    <!-- Footer -->
+    <footer class="text-center py-10 border-t border-slate-800/80 text-slate-500 text-sm mt-12 bg-slate-950">
+        <p>&copy; 2025–2026 Mani Golzary. All Rights Reserved.</p>
+        <p class="text-xs text-slate-600 mt-1">STEAM Innovator &bull; AI EdTech Developer &bull; Marketing & Technical SEO Strategist</p>
     </footer>
 
+    <!-- Interactive Scripts: Filters, Slideshow, Animations, Clipboard -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-
-            // Simple mobile menu toggle
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            
+            // 1. Mobile Menu Toggle
+            const mobileMenuBtn = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
+            const hamburgerIcon = document.getElementById('hamburger-icon');
+            const closeIcon = document.getElementById('close-icon');
 
-            mobileMenuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    const isHidden = mobileMenu.classList.toggle('hidden');
+                    if (isHidden) {
+                        hamburgerIcon.classList.remove('hidden');
+                        closeIcon.classList.add('hidden');
+                    } else {
+                        hamburgerIcon.classList.add('hidden');
+                        closeIcon.classList.remove('hidden');
+                    }
+                });
 
-            // Close mobile menu when a link is clicked
-            document.querySelectorAll('#mobile-menu a').forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
+                document.querySelectorAll('#mobile-menu a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                        hamburgerIcon.classList.remove('hidden');
+                        closeIcon.classList.add('hidden');
+                    });
+                });
+            }
+
+            // 2. Project Filter Logic
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const projectItems = document.querySelectorAll('.project-item');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => {
+                        b.classList.remove('active-filter', 'bg-sky-500', 'text-slate-950', 'shadow-md', 'shadow-sky-500/20');
+                        b.classList.add('bg-slate-900', 'text-slate-300', 'border', 'border-slate-800');
+                    });
+                    btn.classList.add('active-filter', 'bg-sky-500', 'text-slate-950', 'shadow-md', 'shadow-sky-500/20');
+                    btn.classList.remove('bg-slate-900', 'text-slate-300', 'border-slate-800');
+
+                    const filterValue = btn.getAttribute('data-filter');
+
+                    projectItems.forEach(item => {
+                        const categories = item.getAttribute('data-category') || '';
+                        if (filterValue === 'all' || categories.includes(filterValue)) {
+                            item.classList.remove('hidden-tab');
+                        } else {
+                            item.classList.add('hidden-tab');
+                        }
+                    });
                 });
             });
 
-            // Slideshow logic
-            let slideIndex = 1;
-            let slideInterval;
+            // 3. Slideshow Logic
+            const slides = document.querySelectorAll('.slide');
+            const prevSlideBtn = document.getElementById('prev-slide');
+            const nextSlideBtn = document.getElementById('next-slide');
+            let currentSlideIdx = 0;
+            let slideTimer;
 
-            function showSlides(n) {
-                let i;
-                let slides = document.getElementsByClassName("slides");
-                let dots = document.getElementsByClassName("dot");
-                if (n > slides.length) {slideIndex = 1}
-                if (n < 1) {slideIndex = slides.length}
-                for (i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none";
-                    slides[i].classList.remove('hidden'); // remove hidden to allow display to work
-                }
-                for (i = 0; i < dots.length; i++) {
-                    dots[i].className = dots[i].className.replace(" bg-slate-200", " bg-slate-600");
-                }
-                slides[slideIndex-1].style.display = "block";
-                dots[slideIndex-1].className += " bg-slate-200";
+            function goToSlide(n) {
+                if (slides.length === 0) return;
+                slides[currentSlideIdx].classList.remove('active-slide');
+                currentSlideIdx = (n + slides.length) % slides.length;
+                slides[currentSlideIdx].classList.add('active-slide');
             }
 
-            function plusSlides(n) {
-                showSlides(slideIndex += n);
-                resetInterval();
+            function startSlideTimer() {
+                clearInterval(slideTimer);
+                slideTimer = setInterval(() => {
+                    goToSlide(currentSlideIdx + 1);
+                }, 6000);
             }
 
-            function currentSlide(n) {
-                showSlides(slideIndex = n);
-                resetInterval();
+            if (prevSlideBtn && nextSlideBtn) {
+                prevSlideBtn.addEventListener('click', () => {
+                    goToSlide(currentSlideIdx - 1);
+                    startSlideTimer();
+                });
+                nextSlideBtn.addEventListener('click', () => {
+                    goToSlide(currentSlideIdx + 1);
+                    startSlideTimer();
+                });
+                startSlideTimer();
             }
 
-            function startInterval() {
-                slideInterval = setInterval(() => {
-                    plusSlides(1);
-                }, 5000); // Change image every 5 seconds
-            }
-
-            function resetInterval() {
-                clearInterval(slideInterval);
-                startInterval();
-            }
-            
-            showSlides(slideIndex);
-            startInterval();
-
-            // Make plusSlides and currentSlide available globally for onclick attributes
-            window.plusSlides = plusSlides;
-            window.currentSlide = currentSlide;
-
-
-            // Scroll Animations
+            // 4. Scroll Reveal Animations Observer
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('is-visible');
                     }
                 });
-            }, {
-                threshold: 0.1
-            });
+            }, { threshold: 0.1 });
 
-            document.querySelectorAll('.fade-in-section').forEach(section => {
-                observer.observe(section);
-            });
+            document.querySelectorAll('.fade-in-section').forEach(sec => observer.observe(sec));
 
-            // Header shadow on scroll
-            const header = document.querySelector('header');
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 10) {
-                    header.classList.add('shadow-lg', 'shadow-slate-900/50');
-                } else {
-                    header.classList.remove('shadow-lg', 'shadow-slate-900/50');
-                }
-            });
-
-            // Custom cursor follower
-            const cursorDot = document.querySelector(".cursor-dot");
-            const cursorOutline = document.querySelector(".cursor-outline");
-            window.addEventListener("mousemove", function (e) {
-                const posX = e.clientX;
-                const posY = e.clientY;
-
-                cursorDot.style.left = `${posX}px`;
-                cursorDot.style.top = `${posY}px`;
-
-                cursorOutline.animate({
-                    left: `${posX}px`,
-                    top: `${posY}px`
-                }, { duration: 500, fill: "forwards" });
-            });
-
-            // Enlarge cursor on hover over links and buttons
-            document.querySelectorAll('a, button').forEach(el => {
-                el.addEventListener('mouseover', () => {
-                    cursorOutline.style.transform = 'translate(-50%, -50%) scale(1.5)';
-                    cursorOutline.style.borderColor = 'rgba(255, 255, 255, 0.8)';
+            // 5. Ambient Cursor Glow Follower (Accessible: never disables native pointer)
+            const glow = document.querySelector('.cursor-glow');
+            if (glow) {
+                window.addEventListener('mousemove', (e) => {
+                    glow.style.left = `${e.clientX}px`;
+                    glow.style.top = `${e.clientY}px`;
                 });
-                el.addEventListener('mouseout', () => {
-                    cursorOutline.style.transform = 'translate(-50%, -50%) scale(1)';
-                    cursorOutline.style.borderColor = 'rgba(14, 165, 233, 0.5)';
+            }
+
+            // 6. Copy Email to Clipboard
+            const copyEmailBtn = document.getElementById('copy-email-btn');
+            const copyBtnText = document.getElementById('copy-btn-text');
+            const emailSpan = document.getElementById('contact-email');
+
+            if (copyEmailBtn && emailSpan) {
+                copyEmailBtn.addEventListener('click', async () => {
+                    try {
+                        const email = emailSpan.textContent.trim();
+                        await navigator.clipboard.writeText(email);
+                        copyBtnText.textContent = 'Copied!';
+                        copyEmailBtn.classList.add('bg-emerald-400');
+                        setTimeout(() => {
+                            copyBtnText.textContent = 'Copy';
+                            copyEmailBtn.classList.remove('bg-emerald-400');
+                        }, 2500);
+                    } catch (err) {
+                        // Fallback selection
+                        const range = document.createRange();
+                        range.selectNode(emailSpan);
+                        window.getSelection().removeAllRanges();
+                        window.getSelection().addRange(range);
+                        copyBtnText.textContent = 'Selected';
+                    }
                 });
-            });
+            }
 
         });
     </script>
